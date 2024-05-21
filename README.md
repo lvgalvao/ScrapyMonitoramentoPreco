@@ -48,4 +48,11 @@ ScrapyMonitoramentoPreco/
 [Github Pages](https://lvgalvao.github.io/ScrapyMonitoramentoPreco/)
 
 ## Como usar
+
 ## Módulos
+
+### Extração
+
+Quick Starter
+
+Ler documentação - https://scrapy.org/
