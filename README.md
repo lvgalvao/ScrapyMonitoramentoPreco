@@ -43,6 +43,9 @@ ScrapyMonitoramentoPreco/
 └── README.md
 
 ## Documentação
+
+[Github Pages](https://lvgalvao.github.io/ScrapyMonitoramentoPreco/)
+
 ## Como usar
 ## Módulos
 
