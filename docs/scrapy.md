@@ -174,3 +174,8 @@ scrapy crawl mercadolivre
 >>>
 ```
 
+## Salvar
+
+```bash
+scrapy crawl mercadolivreitem -o ../../data/data.jsonl
+```

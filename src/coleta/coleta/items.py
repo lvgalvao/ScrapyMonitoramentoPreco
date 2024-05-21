@@ -5,8 +5,13 @@
 
 import scrapy
 
+class ProductItem(scrapy.Item):
+    brand = scrapy.Field()
+    name = scrapy.Field()
+    old_price_reais = scrapy.Field()
+    old_price_centavos = scrapy.Field()
+    new_price_reais = scrapy.Field()
+    new_price_centavos = scrapy.Field()
+    reviews_rating_number = scrapy.Field()
+    reviews_amount = scrapy.Field()
 
-class ColetaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
