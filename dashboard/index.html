@@ -1,0 +1,708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../arquiteturas/">
+      
+      
+        <link rel="next" href="../piloto/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+    
+    
+      
+        <title>Documentação do Dashboard - ScrapyMonitoramentoPreco</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacao-do-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ScrapyMonitoramentoPreco" class="md-header__button md-logo" aria-label="ScrapyMonitoramentoPreco" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ScrapyMonitoramentoPreco
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentação do Dashboard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ScrapyMonitoramentoPreco" class="md-nav__button md-logo" aria-label="ScrapyMonitoramentoPreco" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ScrapyMonitoramentoPreco
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquiteturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquiteturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documentação do Dashboard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Documentação do Dashboard
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisa-de-mercado-tenis-esportivos-no-mercado-livre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisa de Mercado - Tênis Esportivos no Mercado Livre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pesquisa de Mercado - Tênis Esportivos no Mercado Livre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulos Utilizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulos Utilizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streamlit" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamlit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite3" class="md-nav__link">
+    <span class="md-ellipsis">
+      sqlite3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-executar-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Executar o Projeto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piloto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projeto Piloto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scrapy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformacao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisa-de-mercado-tenis-esportivos-no-mercado-livre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisa de Mercado - Tênis Esportivos no Mercado Livre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pesquisa de Mercado - Tênis Esportivos no Mercado Livre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulos Utilizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulos Utilizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streamlit" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamlit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite3" class="md-nav__link">
+    <span class="md-ellipsis">
+      sqlite3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-executar-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Executar o Projeto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="documentacao-do-dashboard">Documentação do Dashboard</h1>
+<h2 id="pesquisa-de-mercado-tenis-esportivos-no-mercado-livre">Pesquisa de Mercado - Tênis Esportivos no Mercado Livre</h2>
+<p>Este projeto utiliza o Streamlit para criar uma aplicação interativa que analisa dados de tênis esportivos do Mercado Livre. A seguir, são descritos os módulos e funcionalidades utilizados.</p>
+<h3 id="modulos-utilizados">Módulos Utilizados</h3>
+<h4 id="streamlit"><code>streamlit</code></h4>
+<p>Streamlit é um framework de código aberto que permite criar aplicações web interativas em Python de forma rápida e fácil. Abaixo estão os principais componentes do Streamlit usados no projeto:</p>
+<ul>
+<li><strong><code>st.title</code></strong>: Define o título da aplicação.</li>
+<li><strong><code>st.subheader</code></strong>: Define um subtítulo para as seções da aplicação.</li>
+<li><strong><code>st.columns</code></strong>: Cria uma disposição em colunas, permitindo organizar os elementos da aplicação lado a lado.</li>
+<li><strong><code>st.metric</code></strong>: Exibe KPIs (Key Performance Indicators) de forma visualmente atraente.</li>
+<li><strong><code>st.bar_chart</code></strong>: Cria gráficos de barras para visualização de dados.</li>
+<li><strong><code>st.write</code></strong>: Exibe tabelas e outros tipos de dados.</li>
+</ul>
+<h4 id="pandas"><code>pandas</code></h4>
+<p>Pandas é uma biblioteca essencial para manipulação e análise de dados em Python. No projeto, é usada para carregar, processar e analisar os dados dos tênis esportivos.</p>
+<ul>
+<li><strong><code>pd.read_sql_query</code></strong>: Lê os dados de uma tabela SQL e retorna um DataFrame.</li>
+<li><strong><code>df.shape</code></strong>: Retorna o número de linhas e colunas do DataFrame.</li>
+<li><strong><code>df['column_name'].nunique</code></strong>: Conta o número de valores únicos em uma coluna.</li>
+<li><strong><code>df['column_name'].mean</code></strong>: Calcula a média dos valores em uma coluna.</li>
+<li><strong><code>df['column_name'].value_counts</code></strong>: Conta a frequência dos valores únicos em uma coluna.</li>
+<li><strong><code>df.groupby('column_name').mean</code></strong>: Agrupa os dados por uma coluna e calcula a média de cada grupo.</li>
+<li><strong><code>df.sort_values</code></strong>: Ordena os valores de um DataFrame.</li>
+</ul>
+<h4 id="sqlite3"><code>sqlite3</code></h4>
+<p>SQLite3 é um banco de dados SQL leve e autônomo. É usado no projeto para armazenar os dados dos tênis esportivos.</p>
+<ul>
+<li><strong><code>sqlite3.connect</code></strong>: Conecta ao banco de dados SQLite.</li>
+<li><strong><code>pd.read_sql_query</code></strong>: Executa uma consulta SQL e retorna os resultados como um DataFrame.</li>
+</ul>
+<h3 id="estrutura-do-codigo">Estrutura do Código</h3>
+<p>O código do projeto está estruturado da seguinte forma:</p>
+<ol>
+<li>
+<p><strong>Conectar ao Banco de Dados</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;../data/quotes.db&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM mercadolivre_items&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Título da Aplicação</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pesquisa de Mercado - Tênis Esportivos no Mercado Livre&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>KPIs Principais</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;KPIs Principais&quot;</span><span class="p">)</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">col3</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">total_items</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">col1</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Número Total de Itens&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">total_items</span><span class="p">)</span>
+
+<span class="n">unique_brands</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">col2</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Número de Marcas Únicas&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">unique_brands</span><span class="p">)</span>
+
+<span class="n">average_new_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">col3</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Preço Médio Novo (R$)&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_new_price</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Análises Específicas</strong></p>
+<ul>
+<li>
+<p><strong>Marcas mais encontradas até a 10ª página</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">&#39;Marcas mais encontradas até a 10ª página&#39;</span><span class="p">)</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">top_10_pages_brands</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">500</span><span class="p">)[</span><span class="s1">&#39;brand&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">col1</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">top_10_pages_brands</span><span class="p">)</span>
+<span class="n">col2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">top_10_pages_brands</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Preço médio por marca</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">&#39;Preço médio por marca&#39;</span><span class="p">)</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">average_price_by_brand</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;brand&#39;</span><span class="p">)[</span><span class="s1">&#39;new_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">col1</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">average_price_by_brand</span><span class="p">)</span>
+<span class="n">col2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">average_price_by_brand</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Satisfação por marca</strong>
+    <div class="highlight"><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">&#39;Satisfação por marca&#39;</span><span class="p">)</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">df_non_zero_reviews</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;reviews_rating_number&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">satisfaction_by_brand</span> <span class="o">=</span> <span class="n">df_non_zero_reviews</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;brand&#39;</span><span class="p">)[</span><span class="s1">&#39;reviews_rating_number&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">col1</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">satisfaction_by_brand</span><span class="p">)</span>
+<span class="n">col2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">satisfaction_by_brand</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="como-executar-o-projeto">Como Executar o Projeto</h3>
+<ol>
+<li>
+<p><strong>Instale as dependências necessárias:</strong>
+    <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>streamlit<span class="w"> </span>pandas<span class="w"> </span>sqlite3
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Navegue até o diretório do projeto:</strong>
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/dashboard
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Execute o aplicativo Streamlit:</strong>
+    <div class="highlight"><pre><span></span><code>streamlit<span class="w"> </span>run<span class="w"> </span>app.py
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Acesse o aplicativo no navegador:</strong>
+    Abra <code>http://localhost:8501</code> no seu navegador para visualizar o aplicativo Streamlit.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>
